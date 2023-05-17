@@ -3,6 +3,7 @@ import * as cheerio from "cheerio";
 const websites = [
   "https://www.syntrapxl.be/opleidingen/voltijdse-dagopleiding-xr-developer",
   "https://www.syntrapxl.be/opleidingen/frontend-developer",
+  "https://www.syntrapxl.be/opleidingen/voltijdse-dagopleiding-indie-game-developer",
 ];
 
 const printInfo = async (website) => {
@@ -17,4 +18,6 @@ const printInfo = async (website) => {
   console.log(`${title}: ${spotsLeft}`);
 };
 
-websites.forEach(printInfo);
+for (const website of websites) {
+  await printInfo(website);
+}
